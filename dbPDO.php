@@ -237,28 +237,4 @@ class dbMSSQLPDO {
 	}
 	
 }
-
-
-	/*
-	Kullanım 1
-	$sql = "SELECT HS.SORUMLU, CONCAT(HS.SORUMLU,'# ',U.NAME) AS SORUMLU_AD 
-			FROM HKMEKS_SORUMLULAR HS 
-			INNER JOIN USERS U ON U.U_NAME=HS.SORUMLU ORDER BY 2";
-	$stmt = $dbPDO->prepare($sql); 
-	if (!$stmt->execute()) { $cdbPDO->hataMail($dbPDO, $stmt, $sql);}
-	while ($row = $stmt->fetchObject()) {
-		 ?> <option value="<?=$row->SORUMLU ?>" <?=($MARKA_ID==$row->SORUMLU)?' selected':'' ?> ><?=$row->SORUMLU_AD ?></option> <? 
-	}
-	
-	Kullanım 2
-	$sql   	.= " LIMIT 0, 5000";					
-	$stmt = $dbPDO->prepare($sql); 	
-	
-	if (!$stmt->execute($filtre)) { $cdbPDO->hataMail($dbPDO, $stmt, $sql, $filtre);}				
-	$cdbPDO->SQL($sql, $filtre);
-	
-	
-	*/
-
-
- ?>
+?>
